@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos Asignacion Empresas</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        #cuadroBordeTablaAlumnos {
+            padding: 3px;
+            border: 1px solid black;
+        }
+
+        #contenidoFormularioEstadoAlumno {
+            padding: 30px;
+            background-color: grey;
+            margin-top: 22vh;
+            margin-left: 67vh;
+            height: 18vh;
+            border: solid 1px black;
+        }
+
+        #cuerpoEstadoAlumnos {
+            background-color: rgb(151, 50, 50);
+            display: flex;
+            border: solid 1px black;
+            height: 68vh;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpoEstadoAlumnos">
+            <div id="contenidoFormularioEstadoAlumno" style="margin-left: 75vh;">
+                <h3>Asignacion datos de los alumnos Empresas</h3>
+                <form action="/convenios" method="post">
+                    Horario:<input type="time" name="horario">
+                    <br><br>
+                    Fecha entrega Hoja:<input type="date" name="fechaEntrega">
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+
+</html>

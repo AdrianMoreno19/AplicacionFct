@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos Asignacion</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpoEdicionBorradoProfesores">
+            <div id="contenidoFormularioEdicioBorradoProfesores" style="margin-left: 80vh;">
+                <h3>Asignacion de alumnos a pendiente FCT</h3>
+                <form action="/asignacionCurso" method="post">
+                    1DAW: <input type="radio" name="curso" value="1daw">
+                    2DAW: <input type="radio" name="curso" value="2daw">
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+</html>

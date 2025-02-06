@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edicion Borrado de Alumnos</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpoEdicionBorradoContactoEmpresas">
+            <div id="contenidoFormularioEdicioBorradoContactoEmpresas" style="margin-left: 63vh;">
+                <h3>Edicion, Borrado de Contacto de Empresas para FCT como Profesor</h3>
+                <form action="/procesar" method="post">
+                    Eleccion:<select name="eleccionContactoEmpresas">
+                        <option value="edicion">Edicion</option>
+                        <option value="borrado">Borrado</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+</html>

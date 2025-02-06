@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal aplicacion</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function validarFormulario(e) {
+            e.preventDefault();
+            const nombre = document.getElementsByName("nombre")[0].value.trim();
+            const id = document.getElementsByName("id")[0].value.trim();
+            const user = document.getElementsByName("user")[0].value.trim();
+            const email = document.getElementsByName("email")[0].value.trim();
+            const numero = document.getElementsByName("numero")[0].value.trim();
+            const direccion = document.getElementsByName("direccion")[0].value.trim();
+            const fechaNacimiento = document.getElementsByName("fecha")[0].value.trim();
+            const genero = document.querySelector('input[name="masculino"]:checked') ||
+                           document.querySelector('input[name="femenino"]:checked') ||
+                           document.querySelector('input[name="otro"]:checked');
+            const departamento = document.getElementsByName("departamento")[0].value.trim();
+            const contrato = document.getElementsByName("contrato")[0].value.trim();
+            const fechaIngreso = document.getElementsByName("fechaIngreso")[0].value.trim();
+            const pass = document.getElementsByName("pass")[0].value.trim();
+            if (nombre === "") {
+                alert("El campo Nombre Completo es obligatorio");
+                return false;
+            }
+            if (id === "" || isNaN(id) || parseInt(id) <= 0) {
+                alert("El campo ID es obligatorio y debe ser un número válido");
+                return false;
+            }
+            if (user === "") {
+                alert("El campo Usuario es obligatorio");
+                return false;
+            }
+            if (email !== "" && !/\S+@\S+\.\S+/.test(email)) {
+                alert("El correo electrónico no es válido");
+                return false;
+            }
+            if (numero !== "" && (isNaN(numero) || parseInt(numero) <= 0)) {
+                alert("El número de teléfono debe ser un número válido");
+                return false;
+            }
+            if (!genero) {
+                alert("Debe seleccionar un género");
+                return false;
+            }
+            if (pass === "" || pass.length < 6) {
+                alert("El campo Contraseña es obligatorio y debe tener al menos 6 caracteres");
+                return false;
+            }
+            const fechaActual = new Date();
+            if (fechaNacimiento !== "") {
+                const fechaNac = new Date(fechaNacimiento);
+                if (fechaNac >= fechaActual) {
+                    alert("La fecha de nacimiento debe ser anterior a la fecha actual");
+                    return false;
+                }
+            }
+            if (fechaIngreso !== "" && new Date(fechaIngreso) > fechaActual) {
+                alert("La fecha de ingreso no puede ser en el futuro");
+                return false;
+            }
+            alert("Formulario válido y listo para enviar");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpo2">
+            <div id="contenidoFormulario2">
+                <h3>Almacena Info Profesores</h3>
+                <form onsubmit="return validarFormulario(event)">
+                    Nombre Completo:<input type="text" name="nombre">*
+                    <br><br>
+                    ID:<input type="number" name="id">*
+                    <br><br>
+                    Usuario:<input type="text" name="user">*
+                    <br><br>
+                    Correo Electronico:<input type="email" name="email">
+                    <br><br>
+                    Numero de telefono:<input type="number" name="numero">
+                    <br><br>
+                    Dirección:<input type="text" name="direccion">
+                    <br><br>
+                    Fecha Nacimiento:<input type="date" name="fecha">
+                    <br><br>
+                    Masculino<input type="radio" name="masculino">
+                    Femenino<input type="radio" name="femenino">
+                    Otro<input type="radio" name="otro">
+                    <br><br>
+                    Rol:<select name="Rol">
+                        <option value="Profesor">Profesor</option>
+                        <option value="Coordinador">Coordinador</option>
+                        <option value="Jefe_Departamento">Jefe Departamento</option>
+                    </select>
+                    <br><br>
+                    Departamento:<input type="text" name="departamento">
+                    <br><br>
+                    Tipo Contrato:<input type="text" name="contrato">
+                    <br><br>
+                    Fecha Ingreso:<input type="date" name="fechaIngreso">
+                    <br><br>
+                    Foto de perfil:<input type="file" name="foto">
+                    <br><br>
+                    Notas adicionales:<input type="text" name="notas">
+                    <br><br>
+                    Contraseña:<input type="password" name="pass">
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+</html>

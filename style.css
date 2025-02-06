@@ -1,0 +1,219 @@
+body {
+    background-color: black;
+}
+
+#container {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#cabecera {
+    background-color: grey;
+    display: flex;
+    margin: auto;
+    border: solid 1px black;
+    height: 15vh;
+    width: 100%;
+}
+
+#logo {
+    padding-top: 28px;
+    padding-left: 65vh;
+    padding-right: 20px;
+}
+
+#cabecera h1{
+    padding-top: 30px;
+}
+
+#botonCierra{
+    margin-left: 150px;
+    margin-top: 60px;
+}
+
+#botonCierra:hover{
+    background-color: rgb(151, 50, 50);
+}
+
+#cuerpo {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 70vh;
+    width: 100%;
+}
+
+#cuerpo2 {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 95vh;
+    width: 100%;
+}
+
+#cuerpo3 {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 90vh;
+    width: 100%;
+}
+
+#cuerpo4 {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 112vh;
+    width: 100%;
+}
+
+#cuerpo5 {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 105vh;
+    width: 100%;
+}
+
+#cuerpoLogin {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 67vh;
+    width: 100%;
+}
+
+#cuerpoEdicionBorradoAlumnos {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 67vh;
+    width: 100%;
+}
+
+#cuerpoEdicionBorradoEmpresas {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 67vh;
+    width: 100%;
+}
+
+#cuerpoEdicionBorradoContactoEmpresas {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 67vh;
+    width: 100%;
+}
+
+#cuerpoEdicionBorradoProfesores {
+    background-color: rgb(151, 50, 50);
+    display: flex;
+    border: solid 1px black;
+    height: 67vh;
+    width: 100%;
+}
+
+#contenidoFormularioLogueado {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 19vh;
+    margin-left: 70vh;
+    height: 20vh;
+    border: solid 1px black;
+}
+
+#contenidoFormulario {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 19vh;
+    margin-left: 85vh;
+    height: 20vh;
+    border: solid 1px black;
+}
+
+#contenidoFormulario2 {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 7vh;
+    margin-left: 75vh;
+    height: 75vh;
+    border: solid 1px black;
+}
+
+#contenidoFormulario3 {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 6vh;
+    margin-left: 85vh;
+    height: 93vh;
+    border: solid 1px black;
+}
+
+#contenidoFormulario4 {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 12vh;
+    margin-left: 78vh;
+    height: 75vh;
+    border: solid 1px black;
+}
+
+#contenidoFormulario5 {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 8vh;
+    margin-left: 85vh;
+    height: 68vh;
+    border: solid 1px black;
+}
+
+#contenidoFormularioEdicioBorradoAlumnos {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 20vh;
+    margin-left: 67vh;
+    height: 15vh;
+    border: solid 1px black;
+}
+
+#contenidoFormularioEdicioBorradoEmpresas {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 20vh;
+    margin-left: 67vh;
+    height: 15vh;
+    border: solid 1px black;
+}
+
+#contenidoFormularioEdicioBorradoContactoEmpresas {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 20vh;
+    margin-left: 67vh;
+    height: 15vh;
+    border: solid 1px black;
+}
+
+#contenidoFormularioEdicioBorradoProfesores {
+    padding: 30px;
+    background-color: grey;
+    margin-top: 20vh;
+    margin-left: 67vh;
+    height: 15vh;
+    border: solid 1px black;
+}
+
+#pie {
+    background-color: grey;
+    display: flex;
+    border: solid 1px black;
+    height: 15vh;
+    width: 100%;
+}
+
+#pie h1{
+    padding-top: 30px;
+    padding-left: 90vh;
+}

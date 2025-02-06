@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos Asignacion</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        #cuadroBordeTablaAlumnos {
+            padding: 3px;
+            border: 1px solid black;
+        }
+
+        #contenidoFormularioEstadoAlumno {
+            padding: 30px;
+            background-color: grey;
+            margin-top: 5.5vh;
+            margin-left: 67vh;
+            height: 75vh;
+            border: solid 1px black;
+        }
+
+        #cuerpoEstadoAlumnos {
+            background-color: rgb(151, 50, 50);
+            display: flex;
+            border: solid 1px black;
+            height: 93vh;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpoEstadoAlumnos">
+            <div id="contenidoFormularioEstadoAlumno" style="margin-left: 80vh;">
+                <h3>Asignacion del estado de los alumnos</h3>
+                <form action="/asignacionCurso" method="post">
+                    <div id="cuadroBordeTablaAlumnos">
+                        <p>Adrian</p>
+                        <br><br>
+                        <p>Alex</p>
+                        <br><br>
+                        <p>Alonso</p>
+                        <br><br>
+                        <p>Borja</p>
+                        <br><br>
+                        <p>Mario</p>
+                        <br><br>
+                        <p>David</p>
+                    </div>
+                    <br><br>
+                    Nombre:<input type="text" name="nombreAlumno">
+                    <br><br>
+                    <select name="estado">
+                        <option value="NO REALIZA PRACTICAS">NO REALIZA PRACTICAS</option>
+                        <option value="PENDIENTE ASIGNACION DE PRACTICAS">PENDIENTE ASIGNACION DE PRACTICAS </option>
+                        <option value="ASIGNADO A EMPRESA">ASIGNADO A EMPRESA</option>
+                        <option value="PENDIENTE CONVENIO">PENDIENTE CONVENIO</option>
+                        <option value="PENDIENTE RELACION DE ALUMNOS">PENDIENTE RELACION DE ALUMNOS</option>
+                        <option value="PENDIENTE PROGRAMA y HORARIO">PENDIENTE PROGRAMA y HORARIO</option>
+                        <option value="PENDIENTE EVALUCIÓN EMPRESA">PENDIENTE EVALUCIÓN EMPRESA</option>
+                        <option value="PENDIENTE HOJAS DE FIRMAS">PENDIENTE HOJAS DE FIRMAS</option>
+                        <option value="PENDIENTE ENVIO DOCUEMNTACION">PENDIENTE ENVIO DOCUEMNTACION</option>
+                        <option value="FINALIZADAS">FINALIZADAS</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+
+</html>

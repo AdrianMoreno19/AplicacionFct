@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal aplicacion</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function validarFormulario(e) {
+            e.preventDefault();
+            const id = document.getElementsByName("id")[0].value.trim();
+            const nombre = document.getElementsByName("nombre")[0].value.trim();
+            const fecha = document.getElementsByName("fecha")[0].value;
+            const genero = document.querySelector('input[name="masculino"]:checked') ||
+                           document.querySelector('input[name="femenino"]:checked') ||
+                           document.querySelector('input[name="otro"]:checked');
+            const email = document.getElementsByName("email")[0].value.trim();
+            const numero = document.getElementsByName("numero")[0].value.trim();
+            const direccion = document.getElementsByName("direccion")[0].value.trim();
+            const centro = document.getElementsByName("centro")[0].value.trim();
+            const curso = document.getElementsByName("curso")[0].value.trim();
+            const estadoAlumno = document.getElementsByName("estadoAlumno")[0].value.trim();
+            const fechaIngreso = document.getElementsByName("fechaIngreso")[0].value;
+            const notas = document.getElementsByName("notas")[0].value.trim();
+            const observacion = document.getElementsByName("observacion")[0].value.trim();
+
+            if (!id || !nombre || !fecha || !genero || !email || !numero || !direccion || !centro || !curso || !estadoAlumno || !fechaIngreso) {
+                alert("Por favor, completa todos los campos obligatorios.");
+                return false;
+            }
+
+            const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailValido.test(email)) {
+                alert("Por favor, introduce un correo electrónico válido.");
+                return false;
+            }
+
+            if (numero.length < 9 || isNaN(numero)) {
+                alert("Por favor, introduce un número de teléfono válido con al menos 10 dígitos.");
+                return false;
+            }
+
+            if (notas && isNaN(notas)) {
+                alert("Por favor, introduce un valor numérico para las notas.");
+                return false;
+            }
+
+            alert("Formulario validado correctamente.");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpo3">
+            <div id="contenidoFormulario5">
+                <h3>Almacena Info Alumnos</h3>
+                <form onsubmit="validarFormulario(event)">
+                    ID:<input type="text" name="id">
+                    <br><br>
+                    Nombre Completo:<input type="text" name="nombre">
+                    <br><br>
+                    Fecha Nacimiento:<input type="date" name="fecha">
+                    <br><br>
+                    Masculino<input type="radio" name="masculino">
+                    Femenino<input type="radio" name="femenino">
+                    Otro<input type="radio" name="otro">
+                    <br><br>
+                    Correo Electrónico:<input type="email" name="email">
+                    <br><br>
+                    Número de teléfono:<input type="number" name="numero">
+                    <br><br>
+                    Dirección:<input type="text" name="direccion">
+                    <br><br>
+                    Centro Educativo:<input type="text" name="centro">
+                    <br><br>
+                    Grado:<input type="text" name="curso">
+                    <br><br>
+                    Estado del alumno:<input type="text" name="estadoAlumno">
+                    <br><br>
+                    Fecha Ingreso:<input type="date" name="fechaIngreso">
+                    <br><br>
+                    Notas Académicas:<input type="text" name="notas">
+                    <br><br>
+                    Observaciones:<input type="text" name="observacion">
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+</html>

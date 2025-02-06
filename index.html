@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal aplicacion</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validarFormulario(e) {
+            e.preventDefault();
+            const user = document.getElementsByName("user")[0].value.trim();
+            const pass = document.getElementsByName("password")[0].value.trim();
+
+            if (user === "") {
+                alert("El campo usuario no puede estar vacio");
+                return false;
+            }
+            if (pass === "") {
+                alert("El campo password es obligatorio");
+                return false;
+            }
+
+            alert("Todos los campos rellenos correctamente");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpo">
+            <div id="contenidoFormulario">
+                <h3>Inicio Sesion</h3>
+                <form onsubmit="return validarFormulario(event)">
+                    Usuario:<input type="text" name="user">
+                    <br><br>
+                    Password:<input type="password" name="password">
+                    <br><br>
+                </form>
+                <input type="submit" name="enviar" id="Enviar">
+            </div>
+            <script>
+                let boton = document.getElementById("Enviar");
+                boton.addEventListener("click", function () {
+                    let user = document.getElementsByName("user")[0].value.trim()
+                    let pass = document.getElementsByName("password")[0].value.trim()
+                    if (user === "profesor" && pass === "12345") {
+                        window.location.href = "./logins/profesor.html"
+                    } else if (user === "tutor" && pass === "12345") {
+                        window.location.href = "./logins/tutor.html"
+                    } else if (user === "admin" && pass === "12345") {
+                        window.location.href = "./logins/admin.html"
+                    } else {
+                        alert("No has podido iniciar sesion")
+                        console.log("No se ha podido iniciar sesion")
+                    }
+                })
+            </script>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+
+</html>

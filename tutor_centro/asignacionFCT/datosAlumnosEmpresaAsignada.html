@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos Asignacion Empresas</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        #cuadroBordeTablaAlumnos {
+            padding: 3px;
+            border: 1px solid black;
+        }
+
+        #contenidoFormularioEstadoAlumno {
+            padding: 30px;
+            background-color: grey;
+            margin-top: 5.5vh;
+            margin-left: 67vh;
+            height: 100vh;
+            border: solid 1px black;
+        }
+
+        #cuerpoEstadoAlumnos {
+            background-color: rgb(151, 50, 50);
+            display: flex;
+            border: solid 1px black;
+            height: 115vh;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpoEstadoAlumnos">
+            <div id="contenidoFormularioEstadoAlumno" style="margin-left: 80vh;">
+                <h3>Asignacion datos de los alumnos Empresas</h3>
+                <form action="/asignacionCurso" method="post">
+                    <div id="cuadroBordeTablaAlumnos">
+                        <p>Adrian</p>
+                        <br><br>
+                        <p>Alex</p>
+                        <br><br>
+                        <p>Alonso</p>
+                        <br><br>
+                        <p>Borja</p>
+                        <br><br>
+                        <p>Mario</p>
+                        <br><br>
+                        <p>David</p>
+                    </div>
+                    <br><br>
+                    Nombre Alumno:<input type="text" name="nombreAlumnoEstado">
+                    <br><br>
+                    Empresa:<input type="text" name="empresa">
+                    <br><br>
+                    FechaI:<input type="date" name="fechaI">
+                    <br><br>
+                    FechaF:<input type="date" name="fechaF">
+                    <br><br>
+                    Horario:<input type="time" name="horario">
+                    <br><br>
+                    NumeroHoras:<input type="number" name="numeroHoras">
+                    <br><br>
+                    Modalidad: <select name="modalidad">
+                        <option value="Presencial">Presencial</option>
+                        <option value="Teletrabajo">teletrabajo</option>
+                    </select>
+                    <br><br>
+                    Asignacion:<select name="asignacion">
+                        <option value="ASIGNADO A EMPRESA">ASIGNADO A EMPRESA</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+
+</html>

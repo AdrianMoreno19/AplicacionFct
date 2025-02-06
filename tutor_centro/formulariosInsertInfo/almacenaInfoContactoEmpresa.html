@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal aplicacion</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function validarFormulario(e) {
+            e.preventDefault();
+            const id = document.getElementsByName("id")[0].value.trim();
+            const nombre = document.getElementsByName("nombre")[0].value.trim();
+            const cargo = document.getElementsByName("cargo")[0].value.trim();
+            const departamento = document.getElementsByName("departamento")[0].value.trim();
+            const correo = document.getElementsByName("correo")[0].value.trim();
+            const numero = document.getElementsByName("numero")[0].value.trim();
+            const extenson = document.getElementsByName("extenson")[0].value.trim();
+            const direccionEmpresa = document.getElementsByName("direccionEmpresa")[0].value.trim();
+            const horario = document.getElementsByName("horario")[0].value.trim();
+            const rol = document.getElementsByName("Rol")[0].value.trim();
+            const rolEmpresa = document.getElementsByName("RolEmpresa")[0].value.trim();
+            const fechaIngreso = document.getElementsByName("fechaIngreso")[0].value.trim();
+            const observaciones = document.getElementsByName("observaciones")[0].value.trim();
+            const estado = document.getElementsByName("estado")[0].value.trim();
+            const notas = document.getElementsByName("notas")[0].value.trim();
+
+            if (id === "") {
+                alert("El campo ID es obligatorio");
+                return false;
+            }
+            if (nombre === "") {
+                alert("El campo Nombre Completo es obligatorio");
+                return false;
+            }
+            if (cargo === "") {
+                alert("El campo Cargo es obligatorio");
+                return false;
+            }
+            if (departamento === "") {
+                alert("El campo Departamento es obligatorio");
+                return false;
+            }
+            if (correo === "" || !correo.includes("@")) {
+                alert("Ingrese un correo electrónico válido");
+                return false;
+            }
+            if (numero === "" || isNaN(numero)) {
+                alert("Ingrese un número de teléfono válido");
+                return false;
+            }
+            if (direccionEmpresa === "") {
+                alert("El campo Dirección Oficina es obligatorio");
+                return false;
+            }
+            if (horario === "") {
+                alert("El campo Horario es obligatorio");
+                return false;
+            }
+            if (rol === "") {
+                alert("Debe seleccionar un Nivel de Acceso");
+                return false;
+            }
+            if (rolEmpresa === "") {
+                alert("Debe seleccionar una Relación con la Empresa");
+                return false;
+            }
+            if (fechaIngreso === "") {
+                alert("El campo Fecha de Ingreso es obligatorio");
+                return false;
+            }
+            if (estado === "") {
+                alert("Debe seleccionar un Estado");
+                return false;
+            }
+
+            alert("Formulario válido y listo para enviar");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpo5">
+            <div id="contenidoFormulario4">
+                <h3>Almacena Info Contacto Empresas</h3>
+                <form onsubmit="return validarFormulario(event)">
+                    ID:<input type="text" name="id">
+                    <br><br>
+                    Nombre_Completo:<input type="text" name="nombre">
+                    <br><br>
+                    Cargo:<input type="text" name="cargo">
+                    <br><br>
+                    Departamento:<input type="text" name="departamento">
+                    <br><br>
+                    Correo_Electronico:<input type="email" name="correo">
+                    <br><br>
+                    Numero_Telefono:<input type="number" name="numero">
+                    <br><br>
+                    Extension_Telefonica:<input type="number" name="extenson">
+                    <br><br>
+                    Direccion_Oficina:<input type="text" name="direccionEmpresa">
+                    <br><br>
+                    Horario:<input type="time" name="horario">
+                    <br><br>
+                    Nivel_Acceso:Rol:<select name="Rol">
+                        <option value="">Seleccione</option>
+                        <option value="Acceso Total">Acceso Total</option>
+                        <option value="Acceso Limitado">Acceso Limitado</option>
+                        <option value="Administrador Personal">Administrador Personal</option>
+                    </select>
+                    <br><br>
+                    Relacion_Empresa:<select name="RolEmpresa">
+                        <option value="">Seleccione</option>
+                        <option value="Empleado">Empleado</option>
+                        <option value="Contratista">Contratista</option>
+                        <option value="Consultor">Consultor</option>
+                        <option value="Directivo">Directivo</option>
+                    </select>
+                    <br><br>
+                    Fecha_Ingreso:<input type="date" name="fechaIngreso">
+                    <br><br>
+                    Foto_Perfil:<input type="image" name="logo">
+                    <br><br>
+                    Observaciones_Adicionales:<input type="text" name="observaciones">
+                    <br><br>
+                    Estado:<select name="estado">
+                        <option value="">Seleccione</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                        <option value="licencia">Licencia</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+                    <br><br>
+                    Notas_Adicionales:<input type="text" name="notas">
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+</html>

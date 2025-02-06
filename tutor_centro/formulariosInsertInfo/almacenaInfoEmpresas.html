@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal aplicacion</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function validarFormulario(e) {
+            e.preventDefault();
+            const id = document.getElementsByName("id")[0].value.trim();
+            const nombreEmpresa = document.getElementsByName("nombreEmpresa")[0].value.trim();
+            const razon = document.getElementsByName("razon")[0].value.trim();
+            const tipoEmpresa = document.getElementsByName("tipoEmpresa")[0].value.trim();
+            const nif = document.getElementsByName("nif")[0].value.trim();
+            const correo = document.getElementsByName("correo")[0].value.trim();
+            const numero = document.getElementsByName("numero")[0].value.trim();
+            const direccion = document.getElementsByName("direccion")[0].value.trim();
+            const ciudad = document.getElementsByName("ciudad")[0].value.trim();
+            const codigo = document.getElementsByName("codigo")[0].value.trim();
+            const pais = document.getElementsByName("pais")[0].value.trim();
+            const fechaCon = document.getElementsByName("fechaCon")[0].value.trim();
+            const sector = document.getElementsByName("sector")[0].value.trim();
+            const numeroEmple = document.getElementsByName("numeroEmple")[0].value.trim();
+            const sitioWeb = document.getElementsByName("sitioWeb")[0].value.trim();
+            const represen = document.getElementsByName("represen")[0].value.trim();
+            const estadoEmpresa = document.getElementsByName("estadoEmpresa")[0].value.trim();
+            const fechaAlta = document.getElementsByName("fechaAlta")[0].value.trim();
+            const notasAdicionales = document.getElementsByName("notasAdicionales")[0].value.trim();
+            if (id === "") {
+                alert("El campo ID es obligatorio");
+                return false;
+            }
+            if (nombreEmpresa === "") {
+                alert("El campo Nombre Empresa es obligatorio");
+                return false;
+            }
+            if (razon === "") {
+                alert("El campo Razón Social es obligatorio");
+                return false;
+            }
+            if (tipoEmpresa === "" || !/\S+@\S+\.\S+/.test(tipoEmpresa)) {
+                alert("El campo Tipo Empresa debe ser un correo electrónico válido");
+                return false;
+            }
+            if (nif === "") {
+                alert("El campo NIF/CIF es obligatorio");
+                return false;
+            }
+            if (correo === "" || !/\S+@\S+\.\S+/.test(correo)) {
+                alert("Ingrese un correo electrónico válido");
+                return false;
+            }
+            if (numero === "" || isNaN(numero) || parseInt(numero) <= 0) {
+                alert("Ingrese un número de teléfono válido");
+                return false;
+            }
+            if (direccion === "") {
+                alert("El campo Dirección es obligatorio");
+                return false;
+            }
+            if (ciudad === "") {
+                alert("El campo Ciudad es obligatorio");
+                return false;
+            }
+            if (codigo === "" || isNaN(codigo) || parseInt(codigo) <= 0) {
+                alert("Ingrese un código postal válido");
+                return false;
+            }
+            if (pais === "") {
+                alert("El campo País es obligatorio");
+                return false;
+            }
+            if (fechaCon === "") {
+                alert("El campo Fecha Constitución es obligatorio");
+                return false;
+            }
+            if (sector === "") {
+                alert("El campo Sector es obligatorio");
+                return false;
+            }
+            if (numeroEmple === "" || isNaN(numeroEmple) || parseInt(numeroEmple) <= 0) {
+                alert("Ingrese un número de empleados válido");
+                return false;
+            }
+            if (sitioWeb !== "" && !/^https?:\/\/[^\s]+$/.test(sitioWeb)) {
+                alert("Ingrese un sitio web válido (opcional)");
+                return false;
+            }
+            if (represen === "") {
+                alert("El campo Representante Legal es obligatorio");
+                return false;
+            }
+            if (estadoEmpresa === "") {
+                alert("El campo Estado Empresa es obligatorio");
+                return false;
+            }
+            if (fechaAlta === "") {
+                alert("El campo Fecha Alta es obligatorio");
+                return false;
+            }
+            alert("Formulario válido y listo para enviar");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../../imagenes/fct.png" alt="Imagen FCT" width="150" height="80" id="logo">
+            <h1>Gestion empresas para FCT</h1>
+        </div>
+        <div id="cuerpo4">
+            <div id="contenidoFormulario3">
+                <h3>Almacena Info Empresas</h3>
+                <form onsubmit="return validarFormulario(event)">
+                    ID:<input type="text" name="id">
+                    <br><br>
+                    nombre_empresa:<input type="text" name="nombreEmpresa">
+                    <br><br>
+                    Razon Social:<input type="text" name="razon">
+                    <br><br>
+                    Tipo_Empresa:<input type="email" name="tipoEmpresa">
+                    <br><br>
+                    NIF/CIF:<input type="text" name="nif">
+                    <br><br>
+                    CorreoElectronico:<input type="email" name="correo">
+                    <br><br>
+                    NumeroTelefono:<input type="number" name="numero">
+                    <br><br>
+                    Direccion:<input type="text" name="direccion">
+                    <br><br>
+                    Ciudad:<input type="text" name="ciudad">
+                    <br><br>
+                    Codigo Postal:<input type="number" name="codigo">
+                    <br><br>
+                    Pais:<input type="text" name="pais">
+                    <br><br>
+                    Fecha_Constitucion:<input type="date" name="fechaCon">
+                    <br><br>
+                    Sector:<input type="text" name="sector">
+                    <br><br>
+                    Numero_Empleados:<input type="number" name="numeroEmple">
+                    <br><br>
+                    sitioWeb:<input type="url" name="sitioWeb">
+                    <br><br>
+                    Logo_Empresa:<input type="image" name="logo">
+                    <br><br>
+                    Representante_Legal:<input type="text" name="represen">
+                    <br><br>
+                    Estado_Empresa:<input type="text" name="estadoEmpresa">
+                    <br><br>
+                    Fecha_Alta:<input type="date" name="fechaAlta">
+                    <br><br>
+                    Notas_Adicionales:<input type="text" name="notasAdicionales">
+                    <br><br>
+                    <input type="submit" name="enviar" id="Enviar">
+                </form>
+            </div>
+        </div>
+        <div id="pie">
+            <h1>Aplicacion FCT</h1>
+        </div>
+    </div>
+</body>
+</html>
